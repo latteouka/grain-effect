@@ -4,6 +4,8 @@ This is a very basic example of how "Point Lighting" work.
 
 In the scene there are actually no light, but we can use shader to generate light effect.
 
+[Live](https://grain-effect.vercel.app/)
+
 ![alt text](https://github.com/oukalatte/grain-effect/blob/main/public/screenshot.png?raw=true)
 
 # Reference
