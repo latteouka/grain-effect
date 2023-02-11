@@ -14,10 +14,6 @@ In the scene there are actually no light, but we can use shader to generate ligh
 
 [gl_FragCoord.xy](https://computergraphics.stackexchange.com/questions/5724/glsl-can-someone-explain-why-gl-fragcoord-xy-screensize-is-performed-and-for)
 
-Learn more about the basic:
+Learn more about the basic: [WebGL 3D - Point Lighting](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html)
 
-[WebGL 3D - Point Lighting](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html)
-
-Lerrn more about the math:
-
-[dot product](https://youtu.be/MOYiVLEnhrw?t=8784)
+Lerrn more about the math: [dot product](https://youtu.be/MOYiVLEnhrw?t=8784)
