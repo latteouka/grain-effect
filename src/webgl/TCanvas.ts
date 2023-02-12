@@ -7,7 +7,10 @@ import fragmentShader from './shaders/fragment.glsl'
 import 'glsl-noise/simplex/2d.glsl'
 import { GUIController } from './utils/gui'
 
+const colorDummy = new THREE.Color()
+
 const uniforms = {
+  color: 0x51b1f5,
   lightIntensity: 0.7,
   noiseFactor: 2.0,
   rotate: false,
@@ -40,13 +43,15 @@ export class TCanvas {
     const gui = GUIController.instance
     gui.addNumericSlider(uniforms, 'lightIntensity', 0.55, 0.75, 0.01)
     gui.addNumericSlider(uniforms, 'noiseFactor', 0.1, 5, 0.01)
+    gui.addColor(uniforms, 'color')
     gui.addCheckBox(uniforms, 'rotate')
   }
 
   private createObjects() {
     const material = new THREE.ShaderMaterial({
       uniforms: {
-        uColor: { value: new THREE.Color(0x51b1f5) },
+        //uColor: { value: new THREE.Color(0x51b1f5) },
+        uColor: { value: new THREE.Color(0x313131) },
         // position of spotlight
         uLightPos: {
           value: new THREE.Vector3(0, 3, 5),
@@ -94,6 +99,7 @@ export class TCanvas {
         .set(Math.sin(uniforms.elapsed) * 5, 3, Math.cos(uniforms.elapsed) * 5)
     }
 
+    model.material.uniforms.uColor.value = colorDummy.setHex(uniforms.color)
     model.material.uniforms.uLightIntensity.value = uniforms.lightIntensity
     model.material.uniforms.uNoiseFactor.value = uniforms.noiseFactor
 

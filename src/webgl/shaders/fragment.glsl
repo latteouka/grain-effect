@@ -43,7 +43,7 @@ void main() {
 
   // the most important part
   // power by light_value(bright or dark)
-  // the number will change the contrast significantly
+  // the result will change the contrast significantly
   noiseColors *= pow(light_value.r, 5.0);
 
   // gl_FragColor = vec4(noiseColors, 1.0);
